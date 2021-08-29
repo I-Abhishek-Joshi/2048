@@ -1,0 +1,132 @@
+body, div, p, h1{
+    margin: 0;
+    padding: 0;
+    font-family: Popping, sans-serif;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: tomato;
+}
+.score-viewer{
+    width: 450px;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    background-color: gray;
+    border-radius: 5px;
+}
+.current-score{
+    flex: 1;
+    text-align: center;
+}
+.current-score h1{
+    font-size: 50px;
+}
+.reset-button{
+    margin-right: 20px;
+}
+.reset-button button{
+    background-color: yellow ;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 3px 4px 0px 0px rgba(0,0,0,0.75);
+    transition: 0.2s;
+    font-weight: 600;
+}
+.reset-button button:active{
+    transform: translateY(4px);
+    opacity: 0.5;
+    box-shadow: none;
+}
+.grid{
+    margin-top: 20px;
+    padding-top: 1px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #B4B6C2;
+    height: 450px;
+    width: 450px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.box{
+    background-color: #865439;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.value-text{
+    font-size: 50px;
+    font-weight: 800;
+    color: #402218;
+}
+
+.modal{
+    width: 60%;
+    height: 60%;
+    background-color: teal !important;
+    position: absolute;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
+.win-or-lose{
+    flex: 1;
+}
+.modal button{
+    background-color: yellow ;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 3px 4px 0px 0px rgba(0,0,0,0.75);
+    transition: 0.2s;
+    font-weight: 600;
+}
+.modal button:active{
+    transform: translateY(4px);
+    opacity: 0.8;
+    box-shadow: none;
+}
+.win-or-lose img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media(max-width: 520px){
+    .grid{
+        height: 310px;
+        width: 310px;
+        padding: 10px 5px;
+    }
+    .box{
+        width: 65px;
+        height: 65px;
+    }
+    .value-text{
+        font-size: 30px;
+        font-weight: 800;
+        color: #402218;
+    }
+    .score-viewer{
+        width: 280px;
+    }
+}
